@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AI ChatBot App"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:layout_margin="10dp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/et_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edit_text"
+        android:hint="Enter your question"
+        android:textColorHint="@color/white2"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_generate_ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generate Answer"
+            android:drawableEnd="@drawable/baseline_arrow_upward_24"
+            android:drawablePadding="5dp"
+            android:layout_margin="10dp"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_weight="1"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:textColor="@color/black"
+            android:drawablePadding="5dp"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:backgroundTint="@color/white2"
+            android:layout_margin="10dp"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_edit_text">
+        <TextView
+            android:id="@+id/tv_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Answer"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            />
+
+    </ScrollView>
+
+
+
+</LinearLayout>
