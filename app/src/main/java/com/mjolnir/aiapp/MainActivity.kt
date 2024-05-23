@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val apiKey=BuildConfig.API_KEY
 
         binding.btnGenerateAns.setOnClickListener {
             val prompt = binding.etPrompt.text.toString()
@@ -44,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
                 val generativeModel = GenerativeModel(
                     modelName = "gemini-pro",
-                    apiKey = "AIzaSyCqwDPqgQCWFwvlDovqiZWUpsTKxmc_1nw"
+                    apiKey = apiKey
                 )
 
                 // Launch a coroutine in the lifecycle scope
